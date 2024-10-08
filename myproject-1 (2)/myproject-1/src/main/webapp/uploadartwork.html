@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload Artwork | Artist Dashboard</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 36px;
+            color: #333;
+        }
+
+        .upload-container {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 30px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 10px;
+            font-weight: bold;
+            color: #333;
+        }
+
+        input[type="text"],
+        input[type="file"],
+        textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+            border: 2px solid #ccc;
+        }
+
+        textarea {
+            height: 150px;
+            resize: none;
+        }
+
+        .upload-btn {
+            background-color: #22a6b3;
+            color: white;
+            border: none;
+            padding: 15px;
+            font-size: 18px;
+            cursor: pointer;
+            border-radius: 5px;
+            width: 100%;
+            transition: background-color 0.3s;
+        }
+
+        .upload-btn:hover {
+            background-color: #1f8b96;
+        }
+
+        .cancel-btn {
+            background-color: #e74c3c;
+            color: white;
+            border: none;
+            padding: 15px;
+            font-size: 18px;
+            cursor: pointer;
+            border-radius: 5px;
+            width: 100%;
+            margin-top: 10px;
+            transition: background-color 0.3s;
+        }
+
+        .cancel-btn:hover {
+            background-color: #c0392b;
+        }
+
+    </style>
+</head>
+<body>
+
+    <h1>Upload Your Artwork</h1>
+
+    <div class="upload-container">
+        <form action="#" method="POST" enctype="multipart/form-data">
+            <label for="art-title">Artwork Title:</label>
+            <input type="text" id="art-title" name="art-title" placeholder="Enter the title of your artwork" required>
+
+            <label for="art-description">Description:</label>
+            <textarea id="art-description" name="art-description" placeholder="Provide a description of your artwork" required></textarea>
+
+            <label for="art-category">Category:</label>
+            <input type="text" id="art-category" name="art-category" placeholder="e.g., Abstract, Landscape, Portrait" required>
+
+            <label for="art-price">Price (USD):</label>
+            <input type="text" id="art-price" name="art-price" placeholder="Enter the price in USD" required>
+
+            <label for="art-image">Upload Artwork Image:</label>
+            <input type="file" id="art-image" name="art-image" accept="image/*" required>
+
+            <button type="submit" class="upload-btn">Upload Artwork</button>
+            <button type="button" class="cancel-btn" onclick="window.history.back()">Cancel</button>
+        </form>
+    </div>
+
+</body>
+</html>
